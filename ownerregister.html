@@ -1,0 +1,124 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+        <script>
+        function validateForm() {
+  var name = document.forms["myForm"]["name"].value;
+  if (name == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  var email = document.forms["myForm"]["email"].value;
+  if (email == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+  var phone = document.forms["myForm"]["phone"].value;
+  if (phone == "") {
+    alert("Phone must be filled out");
+    return false;
+  }
+var password = document.forms["myForm"]["password"].value;
+  if (password == "") {
+    alert("Password must be filled out");
+    return false;
+  }
+}
+</script>
+        <style type="text/css">
+<!--
+.style1 {
+        font-size: 36px;
+        font-weight: bold;
+        font-style: italic;
+        color: #003333;
+}
+body {
+        background-color: #CCCC99;
+        margin-left: 3px;
+        margin-top: 3px;
+        margin-right: 1px;
+        margin-bottom: 1px;
+        background-repeat: repeat-x;
+}
+.style4 {
+  font-size: 36px;
+        color: #003333;
+}
+.style5 {
+        font-size: 24px;
+        color: #003333;
+        font-weight: bold;
+}
+.style7 {font-size: 36px; color: #003333; font-weight: bold; }
+-->
+        </style>
+</head>
+<body>
+<div id='fg_membersite'>
+<form name="myForm"  action="registeradmin.php" onSubmit="return validateForm()" method='post'>
+  <div align="center">
+    <legend><span class="style1">Owner Registeration</span></legend>
+    <input type='hidden' name='submitted' id='submitted' value='1'/>
+  </div>
+  <div class='style1'>
+    <div align="center">* Required Fields</div>
+  </div>
+<div><span class='error'></span></div>
+<div class='container'>
+    <label for='name' >
+    <div align="center"><span class="style7">Name*: </span></div>
+    </label>
+    <div align="center"><br/>
+        <span class="style5">
+          <input name='name' type='text' class="style4" id='name' value='' maxlength="50" />
+          <br/>
+          </span></div>
+</div>
+<div class='container'>
+    <div align="center"><span class="style5">
+    </span></div>
+    <span class="style5"><label for='email' >
+    <div align="center">Email Id*:</div>
+    </label>
+    </span>
+    <div align="center"><br/>
+
+ <span class="style5">
+          <input name='email' type='text' class="style4" id='email' value='' maxlength="50" />
+          <br/>
+          </span></div>
+</div>
+        <div class='container'>
+      <div align="center"><span class="style5">
+      </span></div>
+      <span class="style5"><label for='phoneno' >
+      <div align="center">Phone No*:</div>
+      </label>
+      </span>
+      <div align="center"><br/>
+            <input name='phone' type='text' class="style4" id='phoneno' value='' maxlength="50" />
+        <br/>
+            <span id='register_username_errorloc' class='error'></span></div>
+        </div>
+<div class='container' style='height:80px;'>
+    <label for='password' >
+    <div align="center" class="style5"> Password*:</div>
+    </label>
+    <div align="center"><br/>
+    </div>
+    <div class='pwdwidgetdiv' id='thepwddiv' >
+      <div align="center"><span class="container" style="height:80px;">
+        <input name='password' type='password' class="style4" id='password' maxlength="50" />
+        </span></div>
+    </div>
+    <div id='register_password_errorloc' class='error' style='clear:both'></div>
+</div>
+
+<div class='container'>
+    <div align="center">
+      <input name='Submit' type='submit'class="style4" value='Submit' />
+    </div>
+</div>
+</form>
+</body>
+</html>
